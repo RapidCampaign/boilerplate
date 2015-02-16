@@ -2,16 +2,21 @@
 
 namespace AppBundle\Controller;
 
+use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class DefaultController extends FOSRestController
 {
     /**
-     * @Route("/app/example", name="homepage")
+     * @Route("/test", name="homepage")
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $data = array(
+            array(
+                'msg' => 'Hello world!'
+            )
+        );
+        return $this->handleView($this->view($data)->setFormat('json'));
     }
 }

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js">
   <head>
@@ -17,18 +18,22 @@
   </head>
   <body ng-app="frontendApp">
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+     <p> User placing an element or image in a position .</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="row">
       <div class="small-12 columns">
         <div id="main-view" ng-view>
+        <element class="box">Place element 1</element>
+        <element class="box">place element 2</element>
+	<element class="box">Place element 3</element>
         </div>
       </div>
     </div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+  
+   <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>

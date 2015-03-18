@@ -1,10 +1,26 @@
+
 <!doctype html>
 <html class="no-js">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Drag and drop Text block</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <script>
+    function allowDrop(ev) {
+       ev.preventDefault();
+}
+
+    function drag(ev) {
+       ev.dataTransfer.setData("text", ev.target.id);
+}
+    function drop(ev) {
+       ev.preventDefault();
+       var data = ev.dataTransfer.getData("text");
+       ev.target.appendChild(document.getElementById(data())
+}
+</script>
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -17,18 +33,44 @@
   </head>
   <body ng-app="frontendApp">
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+     <p> User placing an element or image in a position .</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="row">
       <div class="small-12 columns">
-        <div id="main-view" ng-view>
+        <div id="main-view" ng-view ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <img id="drag1" src="img_logo.gif" draggable="true"
+        <img id="drag1" src="img_logo2.gif" draggable="true"
+        <img id="drag1" src="img_logo3.gif" draggable="true"
+        ondragstart="drag(event)" width="336" height="69">
+      
+<script>
+    function allowDrop(ev) {
+       ev.preventDefault();
+}
+
+    function drag(ev) {
+       ev.dataTransfer.setData("text", ev.target.id);
+}
+    function drop(ev) {
+       ev.preventDefault();
+       var data = ev.dataTransfer.getData("text");
+       ev.target.appendChild(document.getElementById(data())
+}
+</script>
+
+
+
+        <element class="box">Place element 1</element>
+        <element class="box">place element 2</element>
+	<element class="box">Place element 3</element>
         </div>
       </div>
     </div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
+  
+   <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.js"></script>
